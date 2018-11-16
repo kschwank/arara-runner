@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	build-essential \
 	zip \
 	unzip \
+	default-jre-headless \
 	texlive \
 	texlive-generic-recommended \
 	texlive-latex-recommended \
