@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	texlive-font-utils \
 	texlive-xetex \
 	texlive-luatex \
+	fontconfig \
 	fonts-lmodern \
 	fonts-font-awesome \
 	&& apt-get autoclean -y \
