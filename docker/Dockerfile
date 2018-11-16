@@ -2,6 +2,7 @@ FROM ubuntu:latest
 MAINTAINER Karsten Schwank <karsten.schwank@iteratec.de>
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
+	build-essential \
 	texlive \
 	texlive-generic-recommended \
 	texlive-latex-recommended \
