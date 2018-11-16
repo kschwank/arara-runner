@@ -4,6 +4,7 @@ MAINTAINER Karsten Schwank <karsten.schwank@iteratec.de>
 RUN apt-get update && apt-get install -y --no-install-recommends \
 	build-essential \
 	zip \
+	unzip \
 	texlive \
 	texlive-generic-recommended \
 	texlive-latex-recommended \
