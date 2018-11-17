@@ -1,7 +1,7 @@
 arara-runner
 ============
 
-A Docker image for doing CI for LaTeX files.
+A Docker image for doing CI on LaTeX files.
 
 This image is based on the official Ubuntu image and contains a texlive installation plus a
 couple of extra packages I needed to build LaTeX packages with Arara with Gitlab.
