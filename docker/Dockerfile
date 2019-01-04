@@ -21,3 +21,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	&& apt-get clean -y \
 	&& rm -rf /var/lib/apt/lists/* 
 
+RUN useradd --create-home --shell /bin/bash --uid 1000 texuser
+
+VOLUME /data
+WORKDIR /data
+
+USER texuser
+
