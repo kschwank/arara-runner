@@ -1,4 +1,4 @@
-IMAGENAME = arara-runner
+IMAGENAME = kschwank/arara-runner
 IMAGETAG = latest
 
 PHONY: clean image
