@@ -1,13 +1,14 @@
 FROM ubuntu:latest
 MAINTAINER Karsten Schwank <karsten.schwank@iteratec.de>
 
+RUN apt-get update
+RUN DEBIAN_FRONTEND="noninteractive" TZ="Europe/Berlin" apt-get -y install tzdata
 RUN apt-get update && apt-get install -y --no-install-recommends \
 	build-essential \
 	zip \
 	unzip \
 	default-jre-headless \
 	texlive \
-	texlive-generic-recommended \
 	texlive-latex-recommended \
 	texlive-fonts-recommended \
 	texlive-extra-utils \
@@ -17,6 +18,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	fontconfig \
 	fonts-lmodern \
 	fonts-font-awesome \
+	fonts-liberation2 \
 	&& apt-get autoclean -y \
 	&& apt-get clean -y \
 	&& rm -rf /var/lib/apt/lists/* 
