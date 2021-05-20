@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	unzip \
 	default-jre-headless \
 	texlive \
+	texlive-lang-all \
 	texlive-latex-recommended \
 	texlive-fonts-recommended \
 	texlive-extra-utils \
