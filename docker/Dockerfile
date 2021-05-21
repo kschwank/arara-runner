@@ -1,9 +1,10 @@
-FROM ubuntu:latest
+FROM ubuntu:20.04
 MAINTAINER Karsten Schwank <karsten.schwank@iteratec.de>
 
-RUN apt-get update
-RUN DEBIAN_FRONTEND="noninteractive" TZ="Europe/Berlin" apt-get -y install tzdata
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update \
+    && DEBIAN_FRONTEND="noninteractive" TZ="Europe/Berlin" \
+    && apt-get -y install tzdata \
+    && apt-get install -y --no-install-recommends \
 	build-essential \
 	zip \
 	unzip \
@@ -22,7 +23,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	fonts-liberation2 \
 	&& apt-get autoclean -y \
 	&& apt-get clean -y \
-	&& rm -rf /var/lib/apt/lists/* 
+	&& rm -rf /var/lib/apt/lists/*
 
 RUN useradd --create-home --shell /bin/bash --uid 1000 texuser
 
